@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2.5rem;
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+#logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Lora', serif;
+}
+
+nav ul {
+    display: flex;
+    gap: 2.1rem;
+    margin: 0 auto;
+}
+
+.cta-nav {
+    background-color: #43b4e9;
+    transition: background-color 0.5s ease;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+}
+
+.cta-nav:hover {
+    background-color: #3495c2;
+    cursor: pointer;
+    color: #fac88b;
+}
+
+.cta-nav:active {
+    transform: translateY(1px);
+}
+
+.hero {
+    display: flex;
+    height: 80vh;
+    align-items: flex-end;
+    padding: 0 5%;
+}
+
+.home-hero {
+    background-image: url('images/heroImage.jpg');
+    background-size: cover;
+    background-position: right center;
+}
+
+.home-hero-content {
+    max-width: 900px;
+    border-radius: 8px;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.home-hero-content h1 {
+    font-family: 'Lora', serif;
+    font-size: 6rem;
+    line-height: 1.1;
+    font-weight: 700;
+    font-style: italic;
+    color: #f59f26;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6), 0 8px 20px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.02em;
+    /* text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); */
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.page-content h2 {
+    font-family: 'Lora', serif;
+    font-size: 3rem;
+    margin: 3rem 0 2rem;
+}
+
+.card-container {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.card {
+    border-radius: 10px;
+    width: 25rem;
+    height: 30rem;
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.card::before {
+    will-change: background-color;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    pointer-events: none;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #fff;
+    font-size: 2rem;
+    font-family: 'Lora', serif;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
+}
+
+.card button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    align-self: flex-start;
+    padding: 0.4rem;
+    border-radius: 13px;
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+}
+
+.hidden-text {
+    will-change: opacity, max-height;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.12s ease, max-height 0.12s ease, visibility 0s linear 0.12s;
+}
+
+.card:hover::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .hidden-text {
+    opacity: 1;
+    max-height: 70px;
+    visibility: visible;
+    transition: opacity 0.12s ease, max-height 0.12s ease, visibility 0s;
+}
+
+.rainforest-card {
+    background-image: url('images/rainforest-home.jpg');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.beach-card {
+    background-image: url('images/beach-home-card.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.amenities-card {
+    background-image: url('images/amenities-home.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.divider-line {
+    height: 0px;
+    width: 100%;
+    border-top: 10px solid #43b4e9;
+    margin-bottom: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+}
+
+.left-grid {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.right-grid {
+    font-size: 1.5rem;
+}
+
+footer {
+    background-color: #fab85d;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    font-size: 1.2rem;
+}
+
+.footer-container {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-margin {
+    margin-bottom: 1rem;
+}
+
+.column ul li, .column h3 {
+    margin-bottom: 0.5rem;
+}
+
+footer a:hover {
+    color: #43b4e9;
+}
+
+.accommo-hero {
+    background-image: url('images/accommo-hero.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.accommo-cards {
+    display: flex;
+    gap: 4rem;
+    padding: 2.5rem;
+    background-color: #fac88b;
+    border-radius: 40px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.accommo-cards:hover {
+    transform: translateY(-10px);
+}
+
+.accommo-cards img {
+    width: 28rem;
+    max-width: 100%;
+    height: 20rem;
+    border-radius: 40px;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.flex-accommo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 500px;
+}
+
+.flex-accommo h3 {
+    font-size: 2rem;
+}
+
+.flex-accommo .subheading {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.flex-accommo .subtext {
+    font-size: 1.2rem;
+}
+
+.flex-accommo button {
+    align-self: flex-start;
+    padding: 0.4rem;
+    border-radius: 13px;
+    background-color: transparent;
+    margin-top: 0.6rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.flex-accommo button:hover {
+    background-color: #3495c2;
+    color: #fac88b;
+}
+
+.disclaimer {
+    font-size: 0.9rem;
+    color: #8b6f47;
+    margin-top: 0.5rem;
+}
