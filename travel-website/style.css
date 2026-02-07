@@ -278,12 +278,14 @@ footer a:hover {
     padding: 2.5rem;
     background-color: #fac88b;
     border-radius: 40px;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     transition: transform 0.3s ease;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 .accommo-cards:hover {
     transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25), 0px 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 .accommo-cards img {
@@ -324,6 +326,7 @@ footer a:hover {
     margin-top: 0.6rem;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .flex-accommo button:hover {
@@ -336,3 +339,4 @@ footer a:hover {
     color: #8b6f47;
     margin-top: 0.5rem;
 }
+
