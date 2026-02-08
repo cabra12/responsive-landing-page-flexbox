@@ -390,3 +390,21 @@ footer a:hover {
     background-color: #fac88b;
     border: none;
 }
+
+.trans-hero {
+    background-image: url('images/trans-hero.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.button-trans-flex {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.margin-transport {
+    margin-bottom: 2.5rem;
+}
