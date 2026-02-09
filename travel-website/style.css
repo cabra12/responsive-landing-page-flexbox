@@ -20,7 +20,7 @@ img {
   max-width: 100%;
 }
 
-input, button, textarea {
+input, button, select, textarea {
   font: inherit;
 }
 
@@ -59,6 +59,15 @@ nav ul {
     margin: 0 auto;
 }
 
+ nav ul li {
+    text-shadow: none;
+    transition: text-shadow 0.2s ease-in-out;
+ }
+
+ nav ul li:hover {
+    text-shadow: 0 0 30px #43b4e9, 0 0 25px #43b4e9;
+ }
+
 .cta-nav {
     background-color: #43b4e9;
     transition: background-color 0.5s ease;
@@ -80,9 +89,11 @@ nav ul {
 
 .hero {
     display: flex;
+    flex-direction: column;
     height: 80vh;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
     padding: 0 5%;
 }
 
@@ -163,7 +174,7 @@ nav ul {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6)
 }
 
-.card button {
+.card-button {
     background-color: transparent;
     border: 1px solid #fff;
     color: #fff;
@@ -405,6 +416,50 @@ footer a:hover {
     font-size: 1.5rem;
 }
 
-.margin-transport {
+.margin-p-el {
     margin-bottom: 2.5rem;
+}
+
+.booking-hero {
+    background-image: url('images/booking-hero.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+form {
+    background: rgba(255, 248, 240, 0.85);
+    backdrop-filter: blur(2px);
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 40px;
+    max-width: 500px;
+}
+
+input {
+    width: 100%;
+}
+
+.grid-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+
+#travel {
+    max-width: 48%;
+}
+
+.page-button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
 }
